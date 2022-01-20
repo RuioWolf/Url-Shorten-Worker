@@ -1,14 +1,12 @@
 const config = {
-no_ref: "off", //Control the HTTP referrer header, if you want to create an anonymous link that will hide the HTTP Referer header, please set to "on" .
-theme:"",//Homepage theme, use the empty value for default theme. To use urlcool theme, please fill with "theme/urlcool" .
+no_ref: "on", //Control the HTTP referrer header, if you want to create an anonymous link that will hide the HTTP Referer header, please set to "on" .
+theme:"theme/urlcool",//Homepage theme, use the empty value for default theme. To use urlcool theme, please fill with "theme/urlcool" .
 cors: "on",//Allow Cross-origin resource sharing for API requests.
 }
 
 const html404 = `<!DOCTYPE html>
 <body>
   <h1>404 Not Found.</h1>
-  <p>The url you visit is not found.</p>
-  <a href="https://github.com/xyTom/Url-Shorten-Worker/" target="_self">Fork me on GitHub</a>
 </body>`
 
 let response_header={
@@ -86,7 +84,7 @@ async function handleRequest(request) {
   console.log(path)
   if(!path){
 
-    const html= await fetch("https://xytom.github.io/Url-Shorten-Worker/"+config.theme+"/index.html")
+    const html= await fetch("https://cdn.jsdelivr.net/gh/RuioWolf/Url-Shorten-Worker@gh-pages/"+config.theme+"/index.html")
     
     return new Response(await html.text(), {
     headers: {
