@@ -3,7 +3,7 @@ A URL Shortener created using Cloudflare Worker
 
 # API
 
-[中文API文档](API.md)
+[API Documentation (API文档)](API.md)
 
 # Getting start
 ### 去Workers KV中创建一个命名空间
@@ -33,8 +33,8 @@ Copy the `index.js` code from this project to Cloudflare Worker.
 Click Save and Deploy
 
 # Demo
-https://lnks.tools/
- 
+https://lnks.eu.org/
+
 Note: Because someone abuse this demo website, all the generated link will automatically expired after 24 hours. For long-term use, please deploy your own.
 
 注意：所有由Demo网站生成的链接24小时后会自动失效，如需长期使用请自行搭建。
